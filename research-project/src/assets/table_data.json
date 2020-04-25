@@ -1,0 +1,625 @@
+[
+  {
+    "table_name": "currency",
+    "field": [
+      "currency_id",
+      "date",
+      "currency",
+      "conversion_ratio"
+    ],
+    "data_type": [
+      "integer",
+      "date",
+      "character varying",
+      "numeric"
+    ]
+  },
+  {
+    "table_name": "warehouse",
+    "field": [
+      "warehouse_id",
+      "warehouse_class_id",
+      "stores_id",
+      "warehouse_name",
+      "wa_address1",
+      "wa_address2",
+      "wa_address3",
+      "wa_address4",
+      "warehouse_city",
+      "warehouse_state_province",
+      "warehouse_postal_code",
+      "warehouse_country",
+      "warehouse_owner_name",
+      "warehouse_phone",
+      "warehouse_fax"
+    ],
+    "data_type": [
+      "integer",
+      "integer",
+      "integer",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "department",
+    "field": [
+      "department_id",
+      "department_description"
+    ],
+    "data_type": [
+      "integer",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "employee",
+    "field": [
+      "employee_id",
+      "full_name",
+      "first_name",
+      "last_name",
+      "position_id",
+      "position_title",
+      "store_id",
+      "department_id",
+      "birth_date",
+      "hire_date",
+      "end_date",
+      "salary",
+      "supervisor_id",
+      "education_level",
+      "marital_status",
+      "gender",
+      "management_role"
+    ],
+    "data_type": [
+      "integer",
+      "character varying",
+      "character varying",
+      "character varying",
+      "integer",
+      "character varying",
+      "integer",
+      "integer",
+      "date",
+      "timestamp without time zone",
+      "timestamp without time zone",
+      "numeric",
+      "integer",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "warehouse_class",
+    "field": [
+      "warehouse_class_id",
+      "description"
+    ],
+    "data_type": [
+      "integer",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "account",
+    "field": [
+      "account_id",
+      "account_parent",
+      "account_description",
+      "account_type",
+      "account_rollup",
+      "Custom_Members"
+    ],
+    "data_type": [
+      "integer",
+      "integer",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "days",
+    "field": [
+      "day",
+      "week_day"
+    ],
+    "data_type": [
+      "integer",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "promotion",
+    "field": [
+      "promotion_id",
+      "promotion_district_id",
+      "promotion_name",
+      "media_type",
+      "cost",
+      "start_date",
+      "end_date"
+    ],
+    "data_type": [
+      "integer",
+      "integer",
+      "character varying",
+      "character varying",
+      "numeric",
+      "timestamp without time zone",
+      "timestamp without time zone"
+    ]
+  },
+  {
+    "table_name": "store",
+    "field": [
+      "store_id",
+      "store_type",
+      "region_id",
+      "store_name",
+      "store_number",
+      "store_street_address",
+      "store_city",
+      "store_state",
+      "store_postal_code",
+      "store_country",
+      "store_manager",
+      "store_phone",
+      "store_fax",
+      "first_opened_date",
+      "last_remodel_date",
+      "store_sqft",
+      "grocery_sqft",
+      "frozen_sqft",
+      "meat_sqft",
+      "coffee_bar",
+      "video_store",
+      "salad_bar",
+      "prepared_food",
+      "florist"
+    ],
+    "data_type": [
+      "integer",
+      "character varying",
+      "integer",
+      "character varying",
+      "integer",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "timestamp without time zone",
+      "timestamp without time zone",
+      "integer",
+      "integer",
+      "integer",
+      "integer",
+      "boolean",
+      "boolean",
+      "boolean",
+      "boolean",
+      "boolean"
+    ]
+  },
+  {
+    "table_name": "product",
+    "field": [
+      "product_class_id",
+      "product_id",
+      "brand_name",
+      "product_name",
+      "SKU",
+      "SRP",
+      "gross_weight",
+      "net_weight",
+      "recyclable_package",
+      "low_fat",
+      "units_per_case",
+      "cases_per_pallet",
+      "shelf_width",
+      "shelf_height",
+      "shelf_depth"
+    ],
+    "data_type": [
+      "integer",
+      "integer",
+      "character varying",
+      "character varying",
+      "bigint",
+      "numeric",
+      "real",
+      "real",
+      "boolean",
+      "boolean",
+      "smallint",
+      "smallint",
+      "real",
+      "real",
+      "real"
+    ]
+  },
+  {
+    "table_name": "region",
+    "field": [
+      "region_id",
+      "sales_city",
+      "sales_state_province",
+      "sales_district",
+      "sales_region",
+      "sales_country",
+      "sales_district_id"
+    ],
+    "data_type": [
+      "integer",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "integer"
+    ]
+  },
+  {
+    "table_name": "position",
+    "field": [
+      "position_id",
+      "position_title",
+      "pay_type",
+      "min_scale",
+      "max_scale",
+      "management_role"
+    ],
+    "data_type": [
+      "integer",
+      "character varying",
+      "character varying",
+      "numeric",
+      "numeric",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "employee_closure",
+    "field": [
+      "employee_id",
+      "supervisor_id",
+      "distance"
+    ],
+    "data_type": [
+      "integer",
+      "integer",
+      "integer"
+    ]
+  },
+  {
+    "table_name": "category",
+    "field": [
+      "category_id",
+      "category_parent",
+      "category_description",
+      "category_rollup"
+    ],
+    "data_type": [
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "expense_fact",
+    "field": [
+      "store_id",
+      "account_id",
+      "exp_date",
+      "time_id",
+      "category_id",
+      "currency_id",
+      "amount"
+    ],
+    "data_type": [
+      "integer",
+      "integer",
+      "timestamp without time zone",
+      "integer",
+      "character varying",
+      "integer",
+      "numeric"
+    ]
+  },
+  {
+    "table_name": "store_ragged",
+    "field": [
+      "store_id",
+      "store_type",
+      "region_id",
+      "store_name",
+      "store_number",
+      "store_street_address",
+      "store_city",
+      "store_state",
+      "store_postal_code",
+      "store_country",
+      "store_manager",
+      "store_phone",
+      "store_fax",
+      "first_opened_date",
+      "last_remodel_date",
+      "store_sqft",
+      "grocery_sqft",
+      "frozen_sqft",
+      "meat_sqft",
+      "coffee_bar",
+      "video_store",
+      "salad_bar",
+      "prepared_food",
+      "florist"
+    ],
+    "data_type": [
+      "integer",
+      "character varying",
+      "integer",
+      "character varying",
+      "integer",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "timestamp without time zone",
+      "timestamp without time zone",
+      "integer",
+      "integer",
+      "integer",
+      "integer",
+      "boolean",
+      "boolean",
+      "boolean",
+      "boolean",
+      "boolean"
+    ]
+  },
+  {
+    "table_name": "salary",
+    "field": [
+      "pay_date",
+      "employee_id",
+      "department_id",
+      "currency_id",
+      "salary_paid",
+      "overtime_paid",
+      "vacation_accrued",
+      "vacation_used"
+    ],
+    "data_type": [
+      "timestamp without time zone",
+      "integer",
+      "integer",
+      "integer",
+      "numeric",
+      "numeric",
+      "real",
+      "real"
+    ]
+  },
+  {
+    "table_name": "customer",
+    "field": [
+      "customer_id",
+      "account_num",
+      "lname",
+      "fname",
+      "mi",
+      "address1",
+      "address2",
+      "address3",
+      "address4",
+      "city",
+      "state_province",
+      "postal_code",
+      "country",
+      "customer_region_id",
+      "phone1",
+      "phone2",
+      "birthdate",
+      "marital_status",
+      "yearly_income",
+      "gender",
+      "total_children",
+      "num_children_at_home",
+      "education",
+      "date_accnt_opened",
+      "member_card",
+      "occupation",
+      "houseowner",
+      "num_cars_owned",
+      "fullname"
+    ],
+    "data_type": [
+      "integer",
+      "bigint",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying",
+      "integer",
+      "character varying",
+      "character varying",
+      "date",
+      "character varying",
+      "character varying",
+      "character varying",
+      "smallint",
+      "smallint",
+      "character varying",
+      "date",
+      "character varying",
+      "character varying",
+      "character varying",
+      "integer",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "product_class",
+    "field": [
+      "product_class_id",
+      "product_subcategory",
+      "product_category",
+      "product_department",
+      "product_family"
+    ],
+    "data_type": [
+      "integer",
+      "character varying",
+      "character varying",
+      "character varying",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "inventory_fact",
+    "field": [
+      "product_id",
+      "time_id",
+      "warehouse_id",
+      "store_id",
+      "units_ordered",
+      "units_shipped",
+      "warehouse_sales",
+      "warehouse_cost",
+      "supply_time",
+      "store_invoice"
+    ],
+    "data_type": [
+      "integer",
+      "integer",
+      "integer",
+      "integer",
+      "integer",
+      "integer",
+      "numeric",
+      "numeric",
+      "smallint",
+      "numeric"
+    ]
+  },
+  {
+    "table_name": "reserve_employee",
+    "field": [
+      "employee_id",
+      "full_name",
+      "first_name",
+      "last_name",
+      "position_id",
+      "position_title",
+      "store_id",
+      "department_id",
+      "birth_date",
+      "hire_date",
+      "end_date",
+      "salary",
+      "supervisor_id",
+      "education_level",
+      "marital_status",
+      "gender"
+    ],
+    "data_type": [
+      "integer",
+      "character varying",
+      "character varying",
+      "character varying",
+      "integer",
+      "character varying",
+      "integer",
+      "integer",
+      "timestamp without time zone",
+      "timestamp without time zone",
+      "timestamp without time zone",
+      "numeric",
+      "integer",
+      "character varying",
+      "character varying",
+      "character varying"
+    ]
+  },
+  {
+    "table_name": "sales_fact",
+    "field": [
+      "product_id",
+      "time_id",
+      "customer_id",
+      "promotion_id",
+      "store_id",
+      "store_sales",
+      "store_cost",
+      "unit_sales"
+    ],
+    "data_type": [
+      "integer",
+      "integer",
+      "integer",
+      "integer",
+      "integer",
+      "numeric",
+      "numeric",
+      "numeric"
+    ]
+  },
+  {
+    "table_name": "time_by_day",
+    "field": [
+      "time_id",
+      "the_date",
+      "the_day",
+      "the_month",
+      "the_year",
+      "day_of_month",
+      "week_of_year",
+      "month_of_year",
+      "quarter",
+      "fiscal_period"
+    ],
+    "data_type": [
+      "integer",
+      "timestamp without time zone",
+      "character varying",
+      "character varying",
+      "smallint",
+      "smallint",
+      "integer",
+      "smallint",
+      "character varying",
+      "character varying"
+    ]
+  }
+]

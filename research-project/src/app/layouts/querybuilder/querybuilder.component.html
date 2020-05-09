@@ -1,17 +1,24 @@
 <div>
-  <!-- <form [formGroup]="dynamicForm" > -->
-  <mat-card *ngFor="let config of currentConfig">
-    <query-builder   [(ngModel)]='$uiExpression' [config]='config' (onChangeCallback)="onchange()" [operatorMap]='myOperatorMap'>
-      
+  <div *ngFor="let config of currentConfig; index as i">
+    <div *ngIf="displayElement">
+      <div class="card">
+        <div class="card-body">
+          <div class="alert alert-warning">
+            <button (click)="handleCloseButton($event,i)" type="button" class="close" data-dismiss="alert"
+              aria-label="Close">
+              <i class="material-icons">close</i>
+            </button>
+            <span>
+              <b> {{this.tableMapDrop[i].table_name|uppercase}}</b> </span>
+          </div>
+          <query-builder [(ngModel)]='queryArray[i]' [config]='config' (onChangeCallback)="onchange()"
+            [operatorMap]='myOperatorMap'>
+          </query-builder>
 
-    </query-builder>
+        </div>
 
-  </mat-card>
-<!-- </form> -->
-  <!--  <ng-container><textarea class="output">{{$uiExpression | json}}</textarea></ng-container>
-   -->
-  <button type="submit" class="btn pull-right" style="background-color: #fd9b16;margin-top: 30px;" 
-    (click)="passData($uiExpression)">Submit</button>
-  <div class="clearfix"></div>
-
+      </div>
+    </div>
+  </div>
+ 
 </div>

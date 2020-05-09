@@ -1,0 +1,51 @@
+<!--   <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+  </mat-form-field> -->
+ 
+ <!--  <button type="button" class="btn btn-warning">{{"Total Rows " +" "+searchResult.length}} </button>
+ <div class="table-responsive">
+
+    <table class="table">
+
+      <thead class=" text-primary">
+        <tr>
+          <th>ID</th>
+          <th *ngFor="let column of tableColumnsDisplay">
+            {{column|uppercase}}
+          </th>
+  
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr *ngFor="let char of searchResult;index as i">
+          <td>{{i+1}}</td>
+  
+          <td *ngFor="let col of tableColumnNames">
+            {{char[col]}}
+          </td>
+        </tr>
+  
+      </tbody>
+    </table>
+    <div class="card-footer py-4 d-flex justify-content-end"><ul class="pagination"><li class="page-item prev-page"><a aria-label="Previous" class="page-link"><span aria-hidden="true"><i aria-hidden="true" class="fa fa-angle-left"></i></span></a></li> <li class="page-item"><a class="page-link">1</a></li><li class="page-item"><a class="page-link">2</a></li><li class="page-item active"><a class="page-link">3</a></li><li class="page-item"><a class="page-link">4</a></li><li class="page-item"><a class="page-link">5</a></li> <li class="page-item next-page"><a aria-label="Next" class="page-link"><span aria-hidden="true"><i aria-hidden="true" class="fa fa-angle-right"></i></span></a></li></ul></div>
+  </div> 
+ -->
+ <div>
+  
+  <div>
+    <ngx-datatable [rows]="rows" [columns]="columns" class="material"
+    [columnMode]="ColumnMode.force"
+    [headerHeight]="40"
+    [footerHeight]="50"
+    rowHeight="auto"
+    [limit]="10"
+    [rows]="rows"
+    >
+
+   </ngx-datatable>
+  </div>
+</div>
+  
+ 
